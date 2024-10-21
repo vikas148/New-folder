@@ -1,0 +1,319 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li {
+    display: inline;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+}
+
+nav .cta-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+nav .cta-btn:hover {
+    background-color: #e5533d;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide all navigation links on mobile */
+    }
+
+    .cta-btn {
+        display: block; /* Keep only the Get in Touch button visible */
+        margin-left: auto;
+    }
+
+    .logo {
+        margin-right: auto; /* Align logo and Get in Touch button properly */
+    }
+}
+
+/* styles.css */
+@media (max-width: 768px) {
+    .nav-links li:not(.mobile-only) {
+        display: none;
+    }
+}
+
+/* Hero Section */
+#hero {
+    background: url('https://images.pexels.com/photos/3231359/pexels-photo-3231359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    margin-top: 80px; /* Adjust for fixed navbar height */
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #DAA520;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+
+}
+
+.cta-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    padding: 60px 0;
+}
+
+#about img {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* Services Section */
+
+
+
+/* Services Section */
+#services {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.course-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.course-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.course-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+.enquiry-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.enquiry-btn:hover {
+    background-color: #e5533d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .courses {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+/* Testimonials Section */
+/* Student Reviews Section */
+#testimonials {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.student-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    border-left: 5px solid #ff6347;
+    padding-left: 15px;
+    margin: 0;
+}
+
+blockquote:before {
+    content: open-quote;
+    font-size: 2rem;
+    color: #ff6347;
+}
+
+blockquote:after {
+    content: close-quote;
+    font-size: 2rem;
+    color: #ff6347;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-style: normal;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .student-reviews {
+        padding: 0 20px;
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact form label {
+    margin-top: 10px;
+    text-align: left;
+}
+
+#contact form input, #contact form select, #contact form button {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+#contact form button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#contact form button:hover {
+    background-color: #e5533d;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
